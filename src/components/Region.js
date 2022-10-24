@@ -10,9 +10,8 @@ import DOMPurify from 'dompurify';
 const Region = () => {
     const { isLoading, data, error } = useFetch(
         "http://localhost:5001/gofish?apikey=abrradiology"
-      );      
-    console.log(data, "Region");
-
+      );
+        
   return (
      <>
      {isLoading && <Typography>...Loading</Typography>}
@@ -30,7 +29,7 @@ const Region = () => {
         <AccordionDetails>
         <Typography>
            <strong>{region.SpeciesName}</strong> 
-          </Typography>
+        </Typography>
         <img 
             style={{"maxWidth": 500}} 
             src={region.SpeciesIllustrationPhoto.src} 
